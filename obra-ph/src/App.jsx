@@ -1,15 +1,16 @@
-import React from 'react'
-import Login from './component/Login'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './component/Login';
+import Register from './component/Register';
 
 function App() {
   return (
-    <>
-    <div className='bg-[#d9d9d9] h-screen flex justify-center items-center'>
-      <Login />
-    </div>
-    
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
